@@ -62,13 +62,17 @@ const ro = new IntersectionObserver(entries => {
 revealEls.forEach(el => ro.observe(el));
 
 // ── SKILL BARS ──
-const fills = document.querySelectorAll('.skill-fill');
-const so = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-        if(e.isIntersecting){
-            e.target.classList.add('visible');
-            so.unobserve(e.target);
-        }
+const skillItems = document.querySelectorAll('.skill-item');
+
+skillItems.forEach(item => {
+    const fill = item.querySelector('.skill-fill');
+    const pct = fill.getAttribute('data-pct') || 1;
+
+    item.addEventListener('mouseenter', () => {
+        fill.style.transform = `scaleX(${pct})`;
     });
-}, { threshold: 0.5 });
-fills.forEach(f => so.observe(f));
+
+    item.addEventListener('mouseleave', () => {
+        fill.style.transform = `scaleX(0)`;
+    });
+});
