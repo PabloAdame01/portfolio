@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pablo Adame — Desarrollador Full Stack</title>
+    <meta name="description"
+        content="Desarrollador Full Stack en España, especializado en React, PHP y Laravel. Disponible para proyectos web, SaaS y automatización." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
@@ -24,8 +26,10 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#stack">Stack</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="nav-right">
@@ -36,6 +40,12 @@
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/" target="_blank" class="linkedin-icon is-hidden" aria-label="GitHub">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.5-1.4-1.9-1.4-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.2 1.4 4 .9.1-.9.5-1.4.8-1.7-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.5.4.9 1.2.9 2.5v3.6c0 .4.2.7.8.6A12 12 0 0 0 12 .5z" />
                     </svg>
                 </a>
                 <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false">
@@ -52,8 +62,10 @@
             <ul class="mobile-nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#stack">Stack</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="mobile-menu-socials">
@@ -69,6 +81,13 @@
                     </svg>
                     <span>Email</span>
                 </a>
+                <a href="https://github.com/" target="_blank" class="mobile-social-link is-hidden">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.5-1.4-1.9-1.4-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.2 1.4 4 .9.1-.9.5-1.4.8-1.7-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.5.4.9 1.2.9 2.5v3.6c0 .4.2.7.8.6A12 12 0 0 0 12 .5z" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
             </div>
         </div>
     </div>
@@ -83,12 +102,12 @@
                         Disponible para proyectos
                     </div>
                     <h1 class="hero-title reveal reveal-delay-1">
-                        Diseño y <br class="desktop-br">desarrollo
-                        <span class="accent-word">experiencias <br class="desktop-br">web.</span>
+                        Construyo <br class="desktop-br">productos web
+                        <span class="accent-word">con PHP y React.</span>
                     </h1>
                     <p class="hero-desc reveal reveal-delay-2">
-                        Desarrollador Full Stack especializado en interfaces modernas y sistemas backend robustos. Foco
-                        en rendimiento, buenas prácticas y experiencia de usuario.
+                        Desarrollo productos digitales orientados a negocio: desde la interfaz hasta el backend, con
+                        foco en rendimiento, mantenibilidad y experiencia real de usuario.
                     </p>
                     <div class="hero-ctas reveal reveal-delay-3">
                         <a href="#proyectos" class="btn-primary">
@@ -99,6 +118,7 @@
                             </svg>
                         </a>
                         <a href="#contacto" class="btn-secondary">Hablemos</a>
+                        <a href="docs/CV-Pablo-Adame.pdf" class="btn-secondary is-hidden" download>Descargar CV</a>
                     </div>
                 </div>
 
@@ -300,6 +320,78 @@
         </div>
     </section>
 
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">Servicios</div>
+                <h2 class="section-title">En qué te puedo ayudar</h2>
+            </div>
+            <div class="services-grid" style="margin-top: 38px;">
+                <article class="service-card reveal reveal-delay-1">
+                    <h3>Landing + SEO técnico</h3>
+                    <p>Landing pages rápidas, pensadas para conversión, con estructura SEO y buenas métricas Core Web
+                        Vitals.</p>
+                </article>
+                <article class="service-card reveal reveal-delay-2">
+                    <h3>Web app / SaaS</h3>
+                    <p>Desarrollo de aplicaciones y paneles de gestión con frontend moderno, backend sólido y base de
+                        datos escalable.</p>
+                </article>
+                <article class="service-card reveal reveal-delay-3">
+                    <h3>Automatización</h3>
+                    <p>Automatizo tareas repetitivas y procesos internos para ahorrar tiempo y reducir errores
+                        operativos.</p>
+                </article>
+                <article class="service-card reveal reveal-delay-1">
+                    <h3>Mantenimiento evolutivo</h3>
+                    <p>Corrección de bugs, mejoras progresivas, refactor y soporte continuo para proyectos ya en
+                        producción.</p>
+                </article>
+                <article class="service-card reveal reveal-delay-2">
+                    <h3>UI / UX orientado a producto</h3>
+                    <p>Interfaces limpias, accesibles y enfocadas en que el usuario complete acciones clave sin
+                        fricción.</p>
+                </article>
+            </div>
+            <div class="services-cta reveal reveal-delay-3">
+                <a href="#contacto" class="btn-primary">Quiero este servicio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">Proceso</div>
+                <h2 class="section-title">Cómo trabajo</h2>
+            </div>
+            <div class="process-grid" style="margin-top: 38px;">
+                <article class="process-step reveal reveal-delay-1">
+                    <span class="step-number">01</span>
+                    <h3>Descubrimiento</h3>
+                    <p>Definimos objetivo, usuario, alcance y prioridades para construir solo lo que aporta valor.</p>
+                </article>
+                <article class="process-step reveal reveal-delay-2">
+                    <span class="step-number">02</span>
+                    <h3>Diseño</h3>
+                    <p>Estructuro la solución, wireframes y flujo de pantallas con foco en usabilidad y conversión.</p>
+                </article>
+                <article class="process-step reveal reveal-delay-3">
+                    <span class="step-number">03</span>
+                    <h3>Desarrollo</h3>
+                    <p>Implementación frontend + backend con buenas prácticas, pruebas manuales y optimización.</p>
+                </article>
+                <article class="process-step reveal reveal-delay-4">
+                    <span class="step-number">04</span>
+                    <h3>Entrega y soporte</h3>
+                    <p>Publicación, seguimiento y mejoras iterativas para que el proyecto evolucione con el negocio.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="proyectos">
         <div class="container">
@@ -467,54 +559,72 @@
                             hagan cada proyecto mejor que el anterior. Actualmente profundizando en Python para backend
                             y automatización.</p>
                     </div>
-                    <div class="exp-card reveal reveal-delay-2">
-                        <div class="exp-role">Desarrollador Web</div>
-                        <div class="exp-meta">MarnaStudio <span>· Abril 2025 – Junio 2025</span></div>
-                        <div class="exp-desc">Desarrollo web con WordPress: personalización de temas, gestión de bases
-                            de datos y adaptación de sitios con diseño responsive para distintos dispositivos.</div>
-                    </div>
                 </div>
 
                 <div class="reveal reveal-delay-2">
-                    <div class="section-label">Habilidades</div>
+                    <div class="section-label">Especialización</div>
                     <div class="skills-list" style="margin-top: 28px;">
-                        <div class="skill-item">
-                            <div class="skill-header"><span>Frontend Development</span><span
-                                    class="skill-pct">90%</span></div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" data-pct="0.90" style="--pct: 0.90"></div>
-                            </div>
+                        <div class="skill-item stack-item">
+                            <div class="skill-header"><span>Frontend</span><span class="skill-pct">HTML, CSS, JS,
+                                    React</span></div>
+                            <p>Interfaces modernas, responsive y orientadas a experiencia de usuario.</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>Backend / APIs</span><span class="skill-pct">78%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" data-pct="0.78" style="--pct: 0.78"></div>
-                            </div>
+                        <div class="skill-item stack-item">
+                            <div class="skill-header"><span>Backend y APIs</span><span class="skill-pct">PHP, Laravel,
+                                    Python</span></div>
+                            <p>Arquitectura, lógica de negocio y conexión entre sistemas.</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>Bases de datos</span><span class="skill-pct">82%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" data-pct="0.82" style="--pct: 0.82"></div>
-                            </div>
+                        <div class="skill-item stack-item">
+                            <div class="skill-header"><span>Bases de datos</span><span class="skill-pct">MySQL,
+                                    MongoDB</span></div>
+                            <p>Modelado de datos, consultas optimizadas y mantenimiento.</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>Cloud & DevOps</span><span class="skill-pct">65%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" data-pct="0.65" style="--pct: 0.65"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>UI / UX Design</span><span class="skill-pct">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" data-pct="0.75" style="--pct: 0.75"></div>
-                            </div>
+                        <div class="skill-item stack-item">
+                            <div class="skill-header"><span>Cloud y herramientas</span><span
+                                    class="skill-pct">AWS, Docker, Git</span></div>
+                            <p>Flujos de despliegue y trabajo colaborativo para entornos reales.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">Experiencia</div>
+                <h2 class="section-title">Timeline profesional</h2>
+            </div>
+            <div class="timeline" style="margin-top: 38px;">
+                <article class="timeline-item reveal reveal-delay-1">
+                    <span class="timeline-dot"></span>
+                    <div class="exp-card">
+                        <div class="exp-role">Desarrollador Web</div>
+                        <div class="exp-meta">MarnaStudio <span>· Abril 2025 – Junio 2025</span></div>
+                        <div class="exp-desc">Personalización de temas WordPress, gestión de bases de datos y adaptación
+                            responsive para distintos dispositivos.</div>
+                    </div>
+                </article>
+                <article class="timeline-item reveal reveal-delay-2">
+                    <span class="timeline-dot"></span>
+                    <div class="exp-card">
+                        <div class="exp-role">Proyecto SaaS · Turnomo</div>
+                        <div class="exp-meta">Producto real <span>· 2025</span></div>
+                        <div class="exp-desc">Participación en plataforma de control horario y RRHH: gestión de turnos,
+                            vacaciones, fichajes y documentación para empresas.</div>
+                    </div>
+                </article>
+                <article class="timeline-item reveal reveal-delay-3">
+                    <span class="timeline-dot"></span>
+                    <div class="exp-card">
+                        <div class="exp-role">Proyecto CRM Telecom</div>
+                        <div class="exp-meta">Desarrollo a medida <span>· 2025</span></div>
+                        <div class="exp-desc">Sistema de gestión para telecomunicaciones con usuarios, servicios,
+                            incidencias y facturación automatizada.</div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -551,6 +661,15 @@
                     </svg>
                     <div class="contact-label">LinkedIn</div>
                     <div class="contact-value">Pablo Adame</div>
+                </a>
+                <a href="https://github.com/" target="_blank" class="contact-card contact-card-enhanced is-hidden">
+                    <div class="contact-card-glow"></div>
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.5-1.4-1.9-1.4-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.2 1.4 4 .9.1-.9.5-1.4.8-1.7-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.5.4.9 1.2.9 2.5v3.6c0 .4.2.7.8.6A12 12 0 0 0 12 .5z" />
+                    </svg>
+                    <div class="contact-label">GitHub</div>
+                    <div class="contact-value">Ver repositorios</div>
                 </a>
             </div>
         </div>
