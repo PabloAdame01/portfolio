@@ -19,27 +19,6 @@ window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
-// ── CURSOR ──
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
-let mx = -100, my = -100, rx = -100, ry = -100;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-(function animCursor(){
-    cursor.style.transform = `translate(${mx-6}px,${my-6}px)`;
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.transform = `translate(${rx-18}px,${ry-18}px)`;
-    requestAnimationFrame(animCursor);
-})();
-document.querySelectorAll('a,button,.project-card,.stack-card').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.style.transform += ' scale(1.5)';
-        ring.style.width = '60px'; ring.style.height = '60px';
-    });
-    el.addEventListener('mouseleave', () => {
-        ring.style.width = '36px'; ring.style.height = '36px';
-    });
-});
 
 // ── MARQUEE ──
 const items = [
@@ -61,18 +40,37 @@ const ro = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 revealEls.forEach(el => ro.observe(el));
 
-// ── SKILL BARS ──
-const skillItems = document.querySelectorAll('.skill-item');
+// ── MOBILE MENU ──
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu-overlay');
+const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
 
-skillItems.forEach(item => {
-    const fill = item.querySelector('.skill-fill');
-    const pct = fill.getAttribute('data-pct') || 1;
+function toggleMenu() {
+    const isOpen = hamburgerBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.classList.toggle('body-no-scroll', isOpen);
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+}
 
-    item.addEventListener('mouseenter', () => {
-        fill.style.transform = `scaleX(${pct})`;
-    });
+hamburgerBtn.addEventListener('click', toggleMenu);
 
-    item.addEventListener('mouseleave', () => {
-        fill.style.transform = `scaleX(0)`;
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('active')) {
+            toggleMenu();
+        }
     });
 });
+
+// ── SKILL BARS ──
+const skillFills = document.querySelectorAll('.skill-fill');
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            skillObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+skillFills.forEach(fill => skillObserver.observe(fill));
